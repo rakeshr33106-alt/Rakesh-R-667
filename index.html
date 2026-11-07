@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rakesh B S | My Portfolio</title>
+
+    <style>
+        /* Basic page styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation bar */
+        header {
+            background-color: #14213d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #00b4d8;
+        }
+
+        /* Home section */
+        .home {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 50px 8%;
+            flex-wrap: wrap;
+        }
+
+        .home-text {
+            max-width: 550px;
+        }
+
+        .home-text h1 {
+            font-size: 42px;
+            color: #14213d;
+        }
+
+        .home-text h3 {
+            color: #0077b6;
+            margin: 10px 0;
+        }
+
+        .home-text p {
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        /* Profile image */
+        .profile img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #0077b6;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #0077b6;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #14213d;
+            transform: translateY(-3px);
+        }
+
+        /* Common section styling */
+        section {
+            padding: 60px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #14213d;
+            margin-bottom: 30px;
+        }
+
+        /* About section */
+        .about {
+            background-color: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #555;
+        }
+
+        /* Education section */
+        .education {
+            text-align: center;
+        }
+
+        .education-box {
+            background: white;
+            padding: 25px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #ddd;
+        }
+
+        /* Skills section */
+        .skills {
+            background-color: white;
+            text-align: center;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-list span {
+            background-color: #e0f4ff;
+            color: #0077b6;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skill-list span:hover {
+            background-color: #0077b6;
+            color: white;
+        }
+
+        /* Projects section */
+        .projects {
+            text-align: center;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-box {
+            background-color: white;
+            padding: 25px;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #ddd;
+            transition: 0.3s;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-box h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        /* Contact section */
+        .contact {
+            background-color: white;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+            color: #0077b6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            color: #14213d;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            .home {
+                text-align: center;
+            }
+
+            .home-text h1 {
+                font-size: 32px;
+            }
+
+            .profile img {
+                width: 200px;
+                height: 200px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <header>
+        <h2>Rakesh B S</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+
+        <div class="home-text">
+            <h3>Hello, Welcome to My Portfolio!</h3>
+
+            <h1>I'm Rakesh B S</h1>
+
+            <h3>BCA Student | Aspiring Web Developer</h3>
+
+            <p>
+                I am a passionate BCA student interested in technology,
+                programming and web development. I enjoy learning new
+                skills and creating creative digital projects.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <!-- Profile Image Placeholder -->
+        <div class="profile">
+            <img
+                src="https://placehold.co/400x400/14213d/ffffff?text=Your+Photo"
+                alt="Rakesh Profile Photo">
+        </div>
+
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            My name is Rakesh B S. I am currently pursuing
+            Bachelor of Computer Applications (BCA).
+            I am interested in computer programming, web development
+            and modern technologies. My goal is to improve my technical
+            knowledge and become a skilled developer.
+        </p>
+
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+
+        <h2 class="section-title">My Education</h2>
+
+        <div class="education-box">
+
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p>SIGS College, Tumkur</p>
+
+            <p>Currently Pursuing</p>
+
+            <p>Interested in Programming and Computer Science</p>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skill-list">
+
+            <span>C Programming</span>
+            <span>Python</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Java</span>
+            <span>Communication</span>
+
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-box">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A personal website created using HTML and CSS
+                    to showcase my profile, education and skills.
+                </p>
+            </div>
+
+            <div class="project-box">
+                <h3>Student Information</h3>
+                <p>
+                    A simple student information webpage
+                    designed using basic HTML and CSS.
+                </p>
+            </div>
+
+            <div class="project-box">
+                <h3>Web Design</h3>
+                <p>
+                    A beginner-friendly webpage created to
+                    practise website designing and styling.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p><b>Name:</b> Rakesh B S</p>
+
+        <p><b>Location:</b> Tumkur, Karnataka</p>
+
+        <!-- Replace with your professional email -->
+        <p><b>Email:</b> your-email@example.com</p>
+
+        <!-- Avoid publishing your personal phone number publicly -->
+        <p><b>Phone:</b> Add your preferred contact number</p>
+
+        <p><b>Hobbies:</b> Technology, Learning and Creativity</p>
+
+        <a href="mailto:your-email@example.com" class="btn">
+            Send Me an Email
+        </a>
+
+        <!-- Replace # with your actual social media profile URLs -->
+        <div class="social-links">
+
+            <p>Connect With Me</p>
+
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Rakesh B S | All Rights Reserved</p>
+
+        <p>Designed with HTML and CSS</p>
+
+    </footer>
+
+</body>
+</html>
